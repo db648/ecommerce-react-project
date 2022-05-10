@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Footerpage } from "../navbarFooter/footer"
 import { Navbar } from "../navbarFooter/navbar"
+import { Productpage } from "../product/product"
 
 export const Homepage = () => {
     let homeImages = [
@@ -35,7 +36,7 @@ export const Homepage = () => {
                 </div>
             </div>
 
-            
+            <Productpage />
         <Footerpage />
         </>
     )

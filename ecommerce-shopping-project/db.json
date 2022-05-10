@@ -234,5 +234,249 @@
         "image" : "https://assets.ajio.com/medias/sys_master/root/20211203/sOPE/61aa4be5aeb2690110f1c10c/-473Wx593H-462504838-green-MODEL.jpg",
         "id" : 18
     }
-]
+],
+
+   "women" : [
+    {
+        "product_name" : "Batman Print Round-Neck T-shirt & Joggers Set",
+        "product_price" : "1700",
+        "product_color" : "Black",
+        "product_size" : "Large",
+        "product_brand" : "WARNER BROTHERS",
+        "product_type" : "women",
+        "category" : "Night wear",
+        "material_type" : "Cotton",
+        "wash" : "Normal wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20210728/YE6e/61017358aeb269a9e357b32a/warner_brothers_black_batman_print_round-neck_t-shirt_%26_joggers_set.jpg",
+        "id" : 13
+    },
+    {
+        "product_name" : "Printed Straight Kurta Set with Dupatta",
+        "product_price" : "2199",
+        "product_color" : "Light Green",
+        "product_size" : "Medium",
+        "product_brand" : "JANASYA",
+        "product_type" : "women",
+        "category" : "Formal wear",
+        "material_type" : "Cotton",
+        "wash" : "Machine wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20211202/f4d6/61a90071aeb2690110ec0fbf/-473Wx593H-463424965-green-MODEL.jpg",
+        "id" : 14
+    },
+    {
+        "product_name" : "Stripes V-Neck Top",
+        "product_price" : "2700",
+        "product_color" : "Red",
+        "product_size" : "Small",
+        "product_brand" : "TIOR",
+        "product_type" : "women",
+        "category" : "Formal wear",
+        "material_type" : "Rayon",
+        "wash" : "Normal wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20220404/XWf6/624ae557aeb26921af09a89f/-473Wx593H-464118203-red-MODEL.jpg",
+        "id" : 7
+    },
+    {
+        "product_name" : "Embellished Straight Kurta",
+        "product_price" : "2200",
+        "product_color" : "Black",
+        "product_size" : "Small",
+        "product_brand" : "GULMOHAR JAIPUR",
+        "product_type" : "women",
+        "category" : "Festive wear",
+        "material_type" : "Cotton",
+        "wash" : "Normal wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20220117/CxzK/61e5649ef997dd6623256986/-473Wx593H-463670640-black-MODEL6.jpg",
+        "id" : 8
+    },
+    {
+        "product_name" : "Floral Print V-neck A-line Kurta",
+        "product_price" : "1500",
+        "product_color" : "Coral pink",
+        "product_size" : "Large",
+        "product_brand" : "AVAASA MIX N' MATCH",
+        "product_type" : "Women",
+        "category" : "Casual wear",
+        "material_type" : "Rayon",
+        "wash" : "Machine wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20211207/YwP4/61ae6bd1f997ddf8f13a2413/-473Wx593H-441134454-coral-MODEL.jpg",
+        "id" : 1
+    },
+    {
+        "product_name" : "Micro Print Palazzo with Semi-Elasticated Waistband",
+        "product_price" : "2000",
+        "product_color" : "Pink",
+        "product_size" : "Medium",
+        "product_brand" : "Aurelia",
+        "product_type" : "women",
+        "category" : "Casual wear",
+        "material_type" : "Cotton",
+        "wash" : "Machine wash",
+        "image" : "https://assets.ajio.com/medias/sys_master/root/20210906/gN7a/613640f7aeb269a2688bee63/-473Wx593H-441124283-darkpink-MODEL.jpg",
+        "id" : 2
+    }
+    ],
+
+    "men" : [
+        {
+            "product_name" : "Full Sleeves Slim Fit Shirt",
+            "product_price" : "3400",
+            "product_color" : "White",
+            "product_size" : "Medium",
+            "product_brand" : "DENNISLINGO PREMIUM ATTIRE",
+            "product_type" : "Men",
+            "category" : "Formal wear",
+            "material_type" : "Cotton",
+            "wash" : "Machine wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20210420/GnFa/607ecd0df997dd7b64b80350/-473Wx593H-462323964-white-MODEL.jpg",
+            "id" : 15
+        },
+        {
+            "product_name" : "Striped Polo T-shirt",
+            "product_price" : "2800",
+            "product_color" : "Red",
+            "product_size" : "Large",
+            "product_brand" : "NETPLAY",
+            "product_type" : "Men",
+            "category" : "Casual wear",
+            "material_type" : "Cotton",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20220301/eVU3/621e376baeb26921afbf077d/-473Wx593H-441137366-red-MODEL.jpg",
+            "id" : 16
+        },
+        {
+            "product_name" : "Checked Shirt with Patch Pocket",
+            "product_price" : "2500",
+            "product_color" : "Blue",
+            "product_size" : "Medium",
+            "product_brand" : "ALLEN SOLLY",
+            "product_type" : "Men",
+            "category" : "Formal wear",
+            "material_type" : "Cotton",
+            "wash" : "Machine wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20211117/ISrs/61940afcf997ddf8f10a3e63/-473Wx593H-469047527-blue-MODEL.jpg",
+            "id" : 9
+        },
+        {
+            "product_name" : "Lightly Distressed Slim Fit Jeans",
+            "product_price" : "3300",
+            "product_color" : "Blue",
+            "product_size" : "Large",
+            "product_brand" : "THE INDIAN GARAGE CO",
+            "product_type" : "Men",
+            "category" : "Casual wear",
+            "material_type" : "Rayon",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20210923/2XKm/614b81a9aeb269a2689f9324/the_indian_garage_co_blue_lightly_distressed_slim_fit_jeans.jpg",
+            "id" : 10
+        },
+        {
+            "product_name" : "Shirt with Patch Pocket",
+            "product_price" : "1850",
+            "product_color" : "Orange",
+            "product_size" : "Large",
+            "product_brand" : "U.S. POLO ASSN",
+            "product_type" : "Men",
+            "category" : "Festival wear",
+            "material_type" : "Cotton",
+            "wash" : "Machine wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20211228/2GVj/61ca38e4f997ddf8f164af5f/-473Wx593H-469079943-rust-MODEL.jpg",
+            "id" : 3
+        },
+        {
+            "product_name" : "Superstate Embroidered Polo T-shirt",
+            "product_price" : "3000",
+            "product_color" : "Yellow",
+            "product_size" : "Small",
+            "product_brand" : "SUPERDRY",
+            "product_type" : "Men",
+            "category" : "Casual wear",
+            "material_type" : "Cotton",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/h1f/h3c/15398407536670/-473Wx593H-410243861-pg5-MODEL.jpg",
+            "id" : 4
+        }
+    ],
+    
+    "kids" : [
+        {
+            "product_name" : "Geometric Round Neck T-shirt",
+            "product_price" : "1399",
+            "product_color" : "Grey",
+            "product_size" : "Medium",
+            "product_brand" : "FORCE",
+            "product_type" : "Kids",
+            "category" : "Casual wear",
+            "material_type" : "Cotton",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20220406/cXR8/624da507aeb26921af0f2135/-473Wx593H-464131350-multi-MODEL.jpg",
+            "id" : 17
+        },
+        {
+            "product_name" : "Polka-Dot Print A-line Dress",
+            "product_price" : "1900",
+            "product_color" : "Green",
+            "product_size" : "Small",
+            "product_brand" : "HIGH FAME",
+            "product_type" : "Kids",
+            "category" : "Casual wear",
+            "material_type" : "Rayon",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20211203/sOPE/61aa4be5aeb2690110f1c10c/-473Wx593H-462504838-green-MODEL.jpg",
+            "id" : 18
+        },
+        {
+            "product_name" : "Embellished Fit & Flare Dress",
+            "product_price" : "1500",
+            "product_color" : "Multi color",
+            "product_size" : "Large",
+            "product_brand" : "AARIKA GIRLS ETHNIC",
+            "product_type" : "Kids",
+            "category" : "Casual wear",
+            "material_type" : "Rayon",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20220317/hw1s/62324e10f997dd03e21a29ec/-473Wx593H-464023679-multi-MODEL.jpg",
+            "id" : 11
+        },
+        {
+            "product_name" : "Flare Dress",
+            "product_price" : "1400",
+            "product_color" : "Baby Pink",
+            "product_size" : "Small",
+            "product_brand" : "GIRLS ETHNIC",
+            "product_type" : "Kids",
+            "category" : "Formal wear",
+            "material_type" : "Cotton",
+            "wash" : "Machine wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20220317/9vO7/62324d53aeb26921afdf6275/-473Wx593H-464023706-pink-MODEL2.jpg",
+            "id" : 12
+        },
+        {
+            "product_name" : "Schiffli Top with Puff Sleeves",
+            "product_price" : "1000 /-",
+            "product_color" : "Orange",
+            "product_size" : "Small",
+            "product_brand" : "RIO GIRLS",
+            "product_type" : "Kids",
+            "category" : "Casual wear",
+            "material_type" : "Rayon",
+            "wash" : "Normal wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20210405/764R/606beaa7f997dd7b64a27e13/rio_girls_orange_schiffli_top_with_puff_sleeves.jpg",
+            "id" : 5
+        },
+        {
+            "product_name" : "Embroidered Shirt Dress",
+            "product_price" : "2199",
+            "product_color" : "Yellow",
+            "product_size" : "Large",
+            "product_brand" : "RIO GIRLS",
+            "product_type" : "Kids",
+            "category" : "Festive wear",
+            "material_type" : "Cotton",
+            "wash" : "Machine wash",
+            "image" : "https://assets.ajio.com/medias/sys_master/root/20211004/VX0o/615af87ff997ddce89f3cd76/rio_girls_yellow_embroidered_shirt_dress.jpg",
+            "id" : 6
+        }
+    ]
+
 }

@@ -1,7 +1,9 @@
 import "./navbar.css"
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export const Navbar = () => {
+    const navigate = useNavigate()
     return(
         <>
             <div className="navbar">
