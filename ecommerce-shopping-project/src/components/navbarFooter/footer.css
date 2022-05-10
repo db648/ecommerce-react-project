@@ -1,0 +1,29 @@
+.footer{
+    height: 200px;
+    color: white;
+    background-color: rgb(8, 13, 85);
+}
+.footer > div {
+    height: 90px;
+    width: 90%;
+}
+.main{
+    display: flex;
+}
+.main > div {
+    height: 50px;
+    margin: auto;
+}
+.rights > h4{
+    height: 40px;
+    width: 25%; 
+    margin: auto;  
+    margin-top: 50px;
+}
+
+@media only screen and (max-width:850) {
+    
+}
+
+
+

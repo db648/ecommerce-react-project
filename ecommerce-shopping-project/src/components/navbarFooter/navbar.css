@@ -1,0 +1,80 @@
+.navbar {
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: rgb(98, 184, 187);
+  }
+  .navbar_left {
+    display: flex;
+    align-items: center;
+  }
+  .navbar_left p{
+      margin-top: 1px;
+  }
+  .navbar_left > div{
+    color: floralwhite;
+    margin: 15px 12px 0 12px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .navbar_left > div:hover{
+    color: chocolate;
+    text-shadow: 0 0 0 transparent;
+  }
+  .header_logo {
+    width: 54px;
+    margin: 12px 1px 12px 30px;
+    cursor: pointer;
+  }
+  .navleftheading h3{ margin-top: 27px; color: chocolate;}
+  .navleftheading h3:hover{
+    color: floralwhite;
+    text-shadow: 0 0 0 transparent;
+  }
+  .navleftheading{
+      margin-right: 25px;
+  }
+  .navbar_right {
+    align-items: center;
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  .navbar_right > div{
+      margin-right: 20px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid gainsboro;
+  }
+  .navbar_right > div:hover {
+      color: aliceblue;
+      background-color: rgb(243, 220, 187);
+  }
+  a{
+      text-decoration: none;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .navbar_left > div{
+      display: none;
+    }
+    .header_logo {
+      width: 30px;
+      margin: 10px 0px;
+    }
+    .navleftheading h3 {
+        margin-top: 18px; font-size: 14px;
+    }
+    .navbar_right{
+        margin: 0px 5px;
+        font-size: 10px;
+    }
+    .navbar_right > div{
+        padding: 1px 6px;
+        margin-right: 5px
+    }
+    .navbar_right img{
+        height: 40px;
+    }
+  }

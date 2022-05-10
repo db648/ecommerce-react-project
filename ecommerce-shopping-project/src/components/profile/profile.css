@@ -1,0 +1,37 @@
+.mainlogin{
+    width: 34%;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+}
+.centerheading{
+    color:darkblue ;
+}
+.inputtag{
+    width: 75%;
+    padding: 14px;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 7px;
+    border: gainsboro;
+    background-color: rgb(193, 230, 230);
+}
+.inputbtn{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: gainsboro;
+    color: white;
+    background-color: #1877f2;
+    margin: 30px 0px;
+}
+
+.registerlink{
+    color: darkblue;
+}
+
+
+.notfound{
+    width: 55%;
+    margin: auto;
+}
