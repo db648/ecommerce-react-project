@@ -14,9 +14,12 @@ export const ProductReducer = (state = initstate, {type, payload}) =>{
         }
 
         case DEL_ITEM : 
-        return state = state.filter((x) => {
-            return x.id !== payload.id;
-        }) 
+            return {
+                ...state
+            }
+        // return state = state.filter((x) => {
+        //     return x.id !== payload.id;
+        // }) 
 
         default : 
             return state;

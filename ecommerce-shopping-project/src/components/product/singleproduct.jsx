@@ -10,6 +10,7 @@ export const ProductDetailspage = () => {
     const {id} = useParams();
     const [proddetails, setProddetails] = useState("");
     const [cartbtn, setCartbtn] = useState("Add to Cart");
+    const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
 
      useEffect(() => {
@@ -20,6 +21,7 @@ export const ProductDetailspage = () => {
         axios.get(`http://localhost:8080/products/${id}`).then((res) => {
             console.log(res.data);
             setProddetails(res.data);
+            
         })
     }
 
@@ -32,6 +34,15 @@ export const ProductDetailspage = () => {
             dispatch(deleteProduct());
             setCartbtn("Add to Cart");
         }
+    }
+
+    const increaseQuantity = () => {
+        setQuantity(quantity+1)
+    }
+
+    const decreaseQuantity = () => {
+        if(quantity <= 1) return;
+        setQuantity(quantity-1)
     }
    
     return(
@@ -49,6 +60,21 @@ export const ProductDetailspage = () => {
                         <h4 className="my-4"> <b>Price : </b> {proddetails.product_price}/-</h4>
                         <h4 className="my-4" > <b>Product Color : </b> {proddetails.product_color}</h4>
                         <h4> <b>Size of the Product : </b>{proddetails.product_size}</h4>
+
+                        <div className="d-flex my-4">
+                            <b>QUANTITY : </b> 
+
+                                <button className="btn btn-outline-danger my-2 my-sm-0 m-2" type="submit" onClick={() => {
+                                    decreaseQuantity()
+                                }}>-</button>
+                                <div className="my-2 my-sm-0 m-2"><b>{quantity}</b></div>
+                                
+
+                                <button className="btn btn-outline-success my-2 my-sm-0 m-2" type="submit" onClick={() => {
+                                    increaseQuantity()
+                                }}>+</button>
+                        </div>
+
                         <br />
                         <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
                             handleCart()
