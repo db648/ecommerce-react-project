@@ -1,4 +1,4 @@
-import { GET_DATA } from "./action";
+import { ADD_ITEM, DEL_ITEM } from "./action";
 import { combineReducers } from "redux"
 
 const initstate = {
@@ -7,11 +7,16 @@ const initstate = {
 
 export const ProductReducer = (state = initstate, {type, payload}) =>{
     switch(type) {
-        case GET_DATA : 
+        case ADD_ITEM : 
         return {
             ...state,
             ProductData : payload
         }
+
+        case DEL_ITEM : 
+        return state = state.filter((x) => {
+            return x.id !== payload.id;
+        }) 
 
         default : 
             return state;

@@ -6,7 +6,7 @@ export const Navbar = () => {
     const navigate = useNavigate()
     return(
         <>
-            <div className="navbar">
+            {/* <div className="navbar">
                 <div className="navbar_left">
                     <Link to="/" className="flex navleftheading">
                         <div>
@@ -54,10 +54,10 @@ export const Navbar = () => {
                         <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
                                      
                 </div>
-           </div>
+           </div> */}
 
 
-           {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -80,14 +80,16 @@ export const Navbar = () => {
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                     </ul>
-                    
                 </div>
-                <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
-                          
+
+                <div>
+                    <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
+                    (0)
+                </div>          
                 <button class="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">Sign-In</button>
                 <button class="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">Sign-Up</button>
                  
-            </nav> */}
+            </nav>
         </>
     )
 }

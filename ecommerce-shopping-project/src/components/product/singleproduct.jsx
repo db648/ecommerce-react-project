@@ -3,10 +3,14 @@ import { Navbar } from "../navbarFooter/navbar"
 import { useParams } from "react-router"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux"
+import { addProduct, deleteProduct } from "../redux/action";
 
 export const ProductDetailspage = () => {
     const {id} = useParams();
     const [proddetails, setProddetails] = useState("");
+    const [cartbtn, setCartbtn] = useState("Add to Cart");
+    const dispatch = useDispatch();
 
      useEffect(() => {
         GetProductsDetails();
@@ -17,6 +21,17 @@ export const ProductDetailspage = () => {
             console.log(res.data);
             setProddetails(res.data);
         })
+    }
+
+    const handleCart = () => {
+        if(cartbtn === "Add to Cart") {
+            dispatch(addProduct());
+            setCartbtn("Remove Item from Cart");
+        }
+        else {
+            dispatch(deleteProduct());
+            setCartbtn("Add to Cart");
+        }
     }
    
     return(
@@ -35,8 +50,10 @@ export const ProductDetailspage = () => {
                         <h4 className="my-4" > <b>Product Color : </b> {proddetails.product_color}</h4>
                         <h4> <b>Size of the Product : </b>{proddetails.product_size}</h4>
                         <br />
-                        <button className="btn btn-outline-primary w-75"  >
-                            Add To Cart
+                        <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
+                            handleCart()
+                        }} >
+                            {cartbtn}
                         </button>
                         <br />
                         <h4 className="my-4">
