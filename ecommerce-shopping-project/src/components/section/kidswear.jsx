@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom";
+import { Navbar } from "../navbarFooter/navbar";
+import { Footerpage } from "../navbarFooter/footer";
 
 // https://assets.ajio.com/cms/AJIO/WEB/15042022-D-Unisex-ourexclusivebrands-kidswear.jpg
     // https://assets.ajio.com/cms/AJIO/WEB/10052022-D-unisex-banner1-men-p2-kidswear-min50.jpg
@@ -20,6 +22,7 @@ export const Kidswear = () => {
 
     return(
         <div>
+            <Navbar />
             <div className="container py-5">
                 <div className="row">
                     <div className="col-12 text-center">
@@ -50,6 +53,7 @@ export const Kidswear = () => {
                     })}
                 </div>
             </div>
+            <Footerpage />
         </div>
     )
 }

@@ -1,23 +1,34 @@
+import { useNavigate } from "react-router"
 import "./footer.css"
 export const Footerpage = () => {
+    const navigate = useNavigate();
     return(
         <>
-            <div className="footer">
-                <div className="main">
-                    <div>
-                        <h4>Free Shipping + Free 30-Day Returns*</h4> 
+            <section className="footer">
+ 
+                <footer className="text-center text-white footerdiv">
+                
+                    <div className="container p-4 pb-0">                   
+                        <section className="">
+                            <p className="d-flex justify-content-center align-items-center">
+                            <span className="me-3">Register for free</span>
+                            <button type="button" className="btn btn-outline-light btn-rounded" onClick={() => {
+                                navigate("/register")
+                            }}>
+                                Sign up!
+                            </button>
+                            </p>
+                        </section>                    
                     </div>
-                    <div>
-                        <h4>Call Us Between 8AM To 8PM : 1-800-120-4400</h4>
+                
+                    <div className="text-center p-3 footertextdiv">
+                        © 2022 Made with ❤ By Durga Bhavani V :
+                        <a className="text-white" href="/">MyShopping.com</a>
                     </div>
-                    <div>
-                        <h4>Email Us: Customer.Care@MyShopping.Com</h4>
-                    </div>
-                </div>
-                <div className="rights">
-                    <h4>@ Made with ❤ By Durga Bhavani V</h4>
-                </div>
-            </div>
+                
+                </footer>
+                
+            </section>
         </>
     )
 }

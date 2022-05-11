@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom";
+import { Navbar } from "../navbarFooter/navbar";
+import { Footerpage } from "../navbarFooter/footer";
 
 // https://assets.ajio.com/cms/AJIO/WEB/15042022-D-Unisex-ourexclusivebrands-womensethnicwear.jpg
 export const Womenswear = () => {
@@ -19,6 +21,7 @@ export const Womenswear = () => {
 
     return(
         <div>
+            <Navbar />
             <div className="container py-5">
                 <div className="row">
                     <div className="col-12 text-center">
@@ -49,6 +52,7 @@ export const Womenswear = () => {
                     })}
                 </div>
             </div>
+            <Footerpage />
         </div>
     )
 }
