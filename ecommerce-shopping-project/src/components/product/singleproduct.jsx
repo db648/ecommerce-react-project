@@ -9,7 +9,6 @@ import { addProduct, deleteProduct } from "../redux/action";
 export const ProductDetailspage = () => {
     const {id} = useParams();
     const [proddetails, setProddetails] = useState([]);
-    const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
@@ -29,26 +28,6 @@ export const ProductDetailspage = () => {
         dispatch(addProduct(proddetails))
     }
 
-    // const handleCart = (proddetails) => {
-
-    //     if(cartbtn === "Add to Cart") {
-    //         dispatch(addProduct(proddetails));
-    //         setCartbtn("Remove Item from Cart");
-    //     }
-    //     else {
-    //         dispatch(deleteProduct(proddetails));
-    //         setCartbtn("Add to Cart");
-    //     }
-    // }
-
-    // const increaseQuantity = () => {
-    //     setQuantity(quantity+1)
-    // }
-
-    // const decreaseQuantity = () => {
-    //     if(quantity <= 1) return;
-    //     setQuantity(quantity-1)
-    // }
    
     return(
         <>

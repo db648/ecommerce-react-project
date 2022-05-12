@@ -11,6 +11,7 @@ import { Womenswear } from './components/section/womenwear'
 import { Menswear } from './components/section/menwear'
 import { Cartpage } from './components/product/cart'
 import { CarouselComponent } from './components/carousel'
+import { CheckoutPage } from './components/product/checkout'
 
 function App() {
 
@@ -23,14 +24,13 @@ function App() {
         <Route exact path="/register" element={ <Registerpage /> } />
         <Route exact path='/product' element={ <Productpage /> } />
         <Route exact path="/products/:id" element={ <ProductDetailspage /> } />
-        <Route exect path='/cart' element={ <Cartpage /> } />
+        <Route exact path='/cart' element={ <Cartpage /> } />
+        <Route exact path='/checkout' element={ <CheckoutPage /> } />
         <Route exact path='/menswear' element={ <Menswear /> } />
         <Route exact path='/womenswear' element={ <Womenswear /> } />
         <Route exact path='/kidswear' element={ <Kidswear/> } />
         <Route exact path="*" element={ <Notfound /> } />
-      </Routes>
-
-      
+      </Routes>     
 
     </div>
   )

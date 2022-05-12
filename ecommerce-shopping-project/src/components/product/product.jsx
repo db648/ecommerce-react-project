@@ -8,10 +8,7 @@ export const Productpage = () => {
     const [product, setProduct] = useState([]);
     const [resData, setResData] = useState([]);
     const [filtersize, setFiltersize] = useState("")
-
-    const cartproduct = useSelector((state) => state.cartReducer.ProductReducer.ProductData)
-   // console.log("cartproduct",cartproduct)
-
+    
     useEffect(() => {
         GetProducts();
     },[])

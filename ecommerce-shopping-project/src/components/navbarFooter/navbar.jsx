@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./navbar.css"
 
 export const Navbar = () => {
-    const cartitems = useSelector((state) => state.cartReducer.ProductReducer.ProductData)
+    const cartitems = useSelector((state) => state.cartReducer.ProductReducer)
     console.log("cartitems", cartitems);
 
     return(
