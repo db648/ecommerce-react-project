@@ -1,6 +1,11 @@
+import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import "./navbar.css"
 
 export const Navbar = () => {
+    const cartitems = useSelector((state) => state.cartReducer.ProductReducer.ProductData)
+    console.log("cartitems", cartitems);
+
     return(
         <>
            <nav className="navbar sticky-top navbar-expand-lg navbar-light bgclr">
@@ -17,6 +22,9 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item active">
+                            <a className="nav-link" href="/product">Products</a>
+                        </li>
+                        <li className="nav-item active">
                             <a className="nav-link" href="/menswear">Mens Wear</a>
                         </li>
                         <li className="nav-item">
@@ -32,8 +40,10 @@ export const Navbar = () => {
                 </div>
 
                 <div>
-                    <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
-                    (0)
+                    <Link to="/cart" >
+                        <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
+                        <span><b>( {cartitems.length })</b></span>
+                    </Link>
                 </div>          
                 <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit">Sign-In</button>
                 <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit">Sign-Up</button>

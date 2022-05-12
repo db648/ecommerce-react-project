@@ -2,11 +2,15 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom";
 import "./product.css"
+import { useSelector } from "react-redux";
 
 export const Productpage = () => {
     const [product, setProduct] = useState([]);
     const [resData, setResData] = useState([]);
     const [filtersize, setFiltersize] = useState("")
+
+    const cartproduct = useSelector((state) => state.cartReducer.ProductReducer.ProductData)
+   // console.log("cartproduct",cartproduct)
 
     useEffect(() => {
         GetProducts();
@@ -14,7 +18,7 @@ export const Productpage = () => {
 
     const GetProducts = () => {
         axios.get("http://localhost:8080/products").then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setProduct(res.data);
             setResData(res.data);
 
@@ -43,7 +47,7 @@ export const Productpage = () => {
             </div> */}
 
             <nav className="navbar navbar-light w-75 mx-auto bg-light justify-content-between">
-                <a className="navbar-brand fw-bold">Products</a>
+                <h4 className="navbar-brand fw-bold">Products</h4>
                 <div>
                     <select
                     className="btn btn-outline-secondary m-2 p-2"

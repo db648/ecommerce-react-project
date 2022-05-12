@@ -1,17 +1,17 @@
 import { Footerpage } from "../navbarFooter/footer"
 import { Navbar } from "../navbarFooter/navbar"
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addProduct, deleteProduct } from "../redux/action";
 
 export const ProductDetailspage = () => {
     const {id} = useParams();
-    const [proddetails, setProddetails] = useState("");
-    const [cartbtn, setCartbtn] = useState("Add to Cart");
+    const [proddetails, setProddetails] = useState([]);
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
      useEffect(() => {
         GetProductsDetails();
@@ -19,31 +19,36 @@ export const ProductDetailspage = () => {
 
     const GetProductsDetails = () => {
         axios.get(`http://localhost:8080/products/${id}`).then((res) => {
-            console.log(res.data);
+            // console.log("single product details",res.data);
             setProddetails(res.data);
             
         })
     }
 
-    const handleCart = () => {
-        if(cartbtn === "Add to Cart") {
-            dispatch(addProduct());
-            setCartbtn("Remove Item from Cart");
-        }
-        else {
-            dispatch(deleteProduct());
-            setCartbtn("Add to Cart");
-        }
+    const handleCart = (proddetails) => {
+        dispatch(addProduct(proddetails))
     }
 
-    const increaseQuantity = () => {
-        setQuantity(quantity+1)
-    }
+    // const handleCart = (proddetails) => {
 
-    const decreaseQuantity = () => {
-        if(quantity <= 1) return;
-        setQuantity(quantity-1)
-    }
+    //     if(cartbtn === "Add to Cart") {
+    //         dispatch(addProduct(proddetails));
+    //         setCartbtn("Remove Item from Cart");
+    //     }
+    //     else {
+    //         dispatch(deleteProduct(proddetails));
+    //         setCartbtn("Add to Cart");
+    //     }
+    // }
+
+    // const increaseQuantity = () => {
+    //     setQuantity(quantity+1)
+    // }
+
+    // const decreaseQuantity = () => {
+    //     if(quantity <= 1) return;
+    //     setQuantity(quantity-1)
+    // }
    
     return(
         <>
@@ -53,6 +58,7 @@ export const ProductDetailspage = () => {
                     <div className="col-md-6 d-flex justify-content-center mx-auto product">
                        <img src={proddetails.image} alt="image" />
                     </div>
+
                     <div className="col-md-6 d-flex flex-column justify-content-center" >
                         <h1 className="display-5 fw-bold" >{proddetails.product_name}</h1>
                         <h3 className="my-4">{proddetails.product_brand}</h3>
@@ -61,7 +67,7 @@ export const ProductDetailspage = () => {
                         <h4 className="my-4" > <b>Product Color : </b> {proddetails.product_color}</h4>
                         <h4> <b>Size of the Product : </b>{proddetails.product_size}</h4>
 
-                        <div className="d-flex my-4">
+                        {/* <div className="d-flex my-4">
                             <b>QUANTITY : </b> 
 
                                 <button className="btn btn-outline-danger my-2 my-sm-0 m-2" type="submit" onClick={() => {
@@ -73,14 +79,20 @@ export const ProductDetailspage = () => {
                                 <button className="btn btn-outline-success my-2 my-sm-0 m-2" type="submit" onClick={() => {
                                     increaseQuantity()
                                 }}>+</button>
-                        </div>
+                        </div> */}
 
                         <br />
                         <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
-                            handleCart()
+                            handleCart(proddetails)
                         }} >
-                            {cartbtn}
+                            Add to Cart
                         </button>
+                        <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
+                            navigate("/cart")
+                        }} >
+                            Go to CartPage
+                        </button>
+
                         <br />
                         <h4 className="my-4">
                             Product Details

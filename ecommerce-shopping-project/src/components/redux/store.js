@@ -2,7 +2,7 @@ import { rootReducer } from "./reducer";
 import { configureStore } from "@reduxjs/toolkit"
 
 const reducer = {
-    productDataReducer : rootReducer 
+    cartReducer : rootReducer 
 }
 
 export const store = configureStore({
