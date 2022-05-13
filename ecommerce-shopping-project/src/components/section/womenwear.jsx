@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "../navbarFooter/navbar";
 import { Footerpage } from "../navbarFooter/footer";
 import { CarouselComponentWomens } from "../carousel/womenCarousel";
+import { Card } from "../profile/card";
 
 // https://assets.ajio.com/cms/AJIO/WEB/15042022-D-Unisex-ourexclusivebrands-womensethnicwear.jpg
 export const Womenswear = () => {
@@ -24,6 +25,7 @@ export const Womenswear = () => {
         <div>
             <Navbar />
             <CarouselComponentWomens />
+            <Card />
             {/* <div className="container py-5">
                 <div className="row">
                     <div className="col-12 text-center">
