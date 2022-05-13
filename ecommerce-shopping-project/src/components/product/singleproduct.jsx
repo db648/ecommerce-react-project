@@ -12,6 +12,10 @@ export const ProductDetailspage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
+    let Quantity = 0;
+    const productitems= useSelector((state) => state.cartReducer.ProductReducer)
+    productitems.forEach((e) => Quantity = e.qty);
+
      useEffect(() => {
         GetProductsDetails();
     },[])
@@ -62,7 +66,7 @@ export const ProductDetailspage = () => {
                                 <button className="btn btn-outline-danger my-2 my-sm-0 m-2" type="submit" onClick={() => {
                                     decreaseQuantity(proddetails)
                                 }}>-</button>
-                                <div className="my-2 my-sm-0 m-2"><b>{}</b></div>
+                                <div className="my-2 my-sm-0 m-2"><b>{Quantity}</b></div>
                                 
 
                                 <button className="btn btn-outline-success my-2 my-sm-0 m-2" type="submit" onClick={() => {

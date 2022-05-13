@@ -19,7 +19,7 @@ export const CarouselComponent = () => {
       <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/10/7feef02b-0072-4c1b-b83d-4e46a5d93c6b1649530621162-Sangria_Desk_Banner.jpg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://assets.ajio.com/cms/AJIO/WEB/10052022-D-unisex-topbannercarousel-p4-jeansshorts-min50.jpg" className="d-block w-100" alt="..."/>
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/13052022-D-unisex-trendscarousel-brands-upto70.jpg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
       <img src="https://assets.ajio.com/cms/AJIO/WEB/10052022-D-MHP-topbannercarousel-p2-johnplayers-upto66.jpg" className="d-block w-100" alt="..."/>

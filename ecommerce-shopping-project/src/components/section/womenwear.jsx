@@ -3,6 +3,7 @@ import axios from "axios"
 import { Link } from "react-router-dom";
 import { Navbar } from "../navbarFooter/navbar";
 import { Footerpage } from "../navbarFooter/footer";
+import { CarouselComponentWomens } from "../carousel/womenCarousel";
 
 // https://assets.ajio.com/cms/AJIO/WEB/15042022-D-Unisex-ourexclusivebrands-womensethnicwear.jpg
 export const Womenswear = () => {
@@ -22,14 +23,15 @@ export const Womenswear = () => {
     return(
         <div>
             <Navbar />
-            <div className="container py-5">
+            <CarouselComponentWomens />
+            {/* <div className="container py-5">
                 <div className="row">
                     <div className="col-12 text-center">
                         <h2>Women's Products</h2>
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
             <div className="container">
                 <div className="row justify-content-around">

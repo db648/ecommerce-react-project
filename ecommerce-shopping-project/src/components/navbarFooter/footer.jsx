@@ -22,7 +22,7 @@ export const Footerpage = () => {
                     </div>
                 
                     <div className="text-center p-3 footertextdiv">
-                        © 2022 Made with ❤ By Durga Bhavani V :
+                        © 2022 Made with ❤ By Durga Bhavani V -
                         <a className="text-white" href="/">MyShopping.com</a>
                     </div>
                 
