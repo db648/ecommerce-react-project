@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/" element={ <Homepage /> } />
         <Route exact path="/login" element={ <Loginpage /> } />
         <Route exact path="/register" element={ <Registerpage /> } />
-        <Route exact path='/product' element={ <Productpage /> } />
+        {/* <Route exact path='/product' element={ <Productpage /> } /> */}
         <Route exact path="/products/:id" element={ <ProductDetailspage /> } />
         <Route exact path='/cart' element={ <Cartpage /> } />
         <Route exact path='/checkout' element={ <CheckoutPage /> } />

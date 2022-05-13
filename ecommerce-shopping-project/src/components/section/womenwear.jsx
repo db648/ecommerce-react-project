@@ -25,15 +25,17 @@ export const Womenswear = () => {
         <div>
             <Navbar />
             <CarouselComponentWomens />
+            <br />
             <Card />
-            {/* <div className="container py-5">
+            <br />
+            <div className="container py-5">
                 <div className="row">
                     <div className="col-12 text-center">
                         <h2>Women's Products</h2>
                     </div>
                 </div>
 
-            </div> */}
+            </div>
 
             <div className="container">
                 <div className="row justify-content-around">
