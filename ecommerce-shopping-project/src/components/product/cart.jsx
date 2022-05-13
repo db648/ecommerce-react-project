@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Footerpage } from "../navbarFooter/footer";
 import { Navbar } from "../navbarFooter/navbar";
-import { addProduct, deleteProduct } from "../redux/action";
+import { addProduct, clearBag, deleteProduct } from "../redux/action";
 
 export const Cartpage = () => {
+  const {id} = useParams()
   const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -14,16 +15,16 @@ export const Cartpage = () => {
 
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
-    total += +cart[i].product_price;
+    total += +cart[i].product_price*cart[i].qty;
   }
 
   const handleDelete = (del) => {
-    dispatch(deleteProduct(del));
+    dispatch(clearBag(del));
   };
 
   const increaseQuantity = (item) => {
       //setQuantity(quantity+1)
-      dispatch(addProduct(item));
+    dispatch(addProduct(item));
   }
 
   const decreaseQuantity = (item) => {
@@ -66,21 +67,21 @@ export const Cartpage = () => {
                     className="btn btn-outline-danger my-2 my-sm-0 m-2"
                     type="submit"
                     onClick={() => {
-                        decreaseQuantity(item);
+                      decreaseQuantity(ele);
                     }}
                   >
                     -
                   </button>
 
                   <div className="my-2 my-sm-0 m-2 p-2">
-                    <b>1</b>
+                    <b>{ele.qty}</b>
                   </div>
 
                   <button
                     className="btn btn-outline-success my-2 my-sm-0 m-2"
                     type="submit"
                     onClick={() => {
-                      increaseQuantity(item);
+                      increaseQuantity(ele);
                     }}
                   >
                     +
@@ -88,13 +89,13 @@ export const Cartpage = () => {
                 </div>
 
                 <div className="col-sm-1">
-                  <h5 className="m-2 p-2">{ele.product_price}/-</h5>
+                  <h5 className="m-2 p-2">{ele.qty*ele.product_price}/-</h5>
                 </div>
 
                 <div
                   className="col-sm-1 m-2 p-2"
                   onClick={() => {
-                    handleDelete(del);
+                     handleDelete(ele);
                   }}
                 >
                   <img src="https://img.icons8.com/color/48/000000/delete-forever.png" />
@@ -138,24 +139,24 @@ export const Cartpage = () => {
             </div>
             <br />
             <div className="row">
-                <div className="col-sm-2 w-75 d-flex justify-content-center mx-auto">
+                <div className="col-sm-2 w-100 d-flex justify-content-center mx-auto">
                     <h4>
-                    Amount Payable : <span>{(total+total*(0.18))}</span>
+                   Total Amount Payable : <span>{(total+total*(0.18))}</span>
                     </h4>
                 </div>
             </div>
 
             <br />
             <div className="row">
-            <div className="col-sm-2 w-75 d-flex justify-content-center mx-auto">
+            <div className="col-sm-2 w-100 d-flex justify-content-center mx-auto">
                 <button
-                className="btn btn-outline-primary my-2 my-sm-0 m-2"
+                className=" w-75 text-secondary btn btn-outline-info my-4 my-sm-2 m-2 p-2"
                 type="submit"
                 onClick={() => {
                     navigate("/checkout")
                 }}
                 >
-                Proceed To Purchase
+                Proceed To Checkout
                 </button>
             </div>
             </div>

@@ -27,15 +27,25 @@ export const ProductDetailspage = () => {
     const handleCart = (proddetails) => {
         dispatch(addProduct(proddetails))
     }
-
+    
+    const increaseQuantity = (proddetails) => {
+        //setQuantity(quantity+1)
+        dispatch(addProduct(proddetails));
+    }
+  
+    const decreaseQuantity = (proddetails) => {
+      //   if(quantity <= 1) return;
+      //   setQuantity(quantity-1)
+        dispatch(deleteProduct(proddetails));
+    }
    
     return(
         <>
         <Navbar />
         <div className="container my-5 py-3">
                 <div className="row">
-                    <div className="col-md-6 d-flex justify-content-center mx-auto product">
-                       <img src={proddetails.image} alt="image" />
+                    <div className="col-md-6 w-50d-flex justify-content-center mx-auto product">
+                       <img className="w-75 d-flex justify-content-center mx-auto" src={proddetails.image} alt="image" />
                     </div>
 
                     <div className="col-md-6 d-flex flex-column justify-content-center" >
@@ -46,27 +56,27 @@ export const ProductDetailspage = () => {
                         <h4 className="my-4" > <b>Product Color : </b> {proddetails.product_color}</h4>
                         <h4> <b>Size of the Product : </b>{proddetails.product_size}</h4>
 
-                        {/* <div className="d-flex my-4">
+                        <div className="d-flex my-4">
                             <b>QUANTITY : </b> 
 
                                 <button className="btn btn-outline-danger my-2 my-sm-0 m-2" type="submit" onClick={() => {
-                                    decreaseQuantity()
+                                    decreaseQuantity(proddetails)
                                 }}>-</button>
-                                <div className="my-2 my-sm-0 m-2"><b>{quantity}</b></div>
+                                <div className="my-2 my-sm-0 m-2"><b>{}</b></div>
                                 
 
                                 <button className="btn btn-outline-success my-2 my-sm-0 m-2" type="submit" onClick={() => {
-                                    increaseQuantity()
+                                    increaseQuantity(proddetails)
                                 }}>+</button>
-                        </div> */}
+                        </div>
 
                         <br />
-                        <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
+                        <button className="btn btn-outline-primary w-50 m-2 p-2" onClick={() => {
                             handleCart(proddetails)
                         }} >
                             Add to Cart
                         </button>
-                        <button className="btn btn-outline-primary w-75 p-2" onClick={() => {
+                        <button className="btn btn-outline-primary w-50 m-2 p-2" onClick={() => {
                             navigate("/cart")
                         }} >
                             Go to CartPage

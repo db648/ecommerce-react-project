@@ -3,9 +3,10 @@ import { Link } from "react-router-dom"
 import "./navbar.css"
 
 export const Navbar = () => {
+    let quantity = 0;
     const cartitems = useSelector((state) => state.cartReducer.ProductReducer)
     console.log("cartitems", cartitems);
-
+    cartitems.forEach((e) => quantity+= e.qty )
     return(
         <>
            <nav className="navbar sticky-top navbar-expand-lg navbar-light bgclr">
@@ -42,7 +43,7 @@ export const Navbar = () => {
                 <div>
                     <Link to="/cart" >
                         <img src="https://img.icons8.com/plasticine/50/000000/shopping-cart-with-money.png" alt="carticon" />
-                        <span><b>( {cartitems.length })</b></span>
+                        <span><b>( { quantity })</b></span>
                     </Link>
                 </div>          
                 <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit">Sign-In</button>
