@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Footerpage } from "../navbarFooter/footer";
 import { Navbar } from "../navbarFooter/navbar";
-import { addProduct, clearBag, deleteProduct } from "../redux/action";
+import { Card } from "../home/card";
+import { addProduct, clearBag, deleteProduct } from "../redux/cart-redux/action";
 
 export const Cartpage = () => {
-  const { id } = useParams();
-  const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cartReducer.ProductReducer);
@@ -43,7 +42,7 @@ export const Cartpage = () => {
               <div className="row">
                 <div className="col-sm-4">
                   <img
-                    className="col-sm-8 d-flex justify-content-center mx-auto m-2 p-2"
+                    className="col-sm-6 d-flex justify-content-center mx-auto m-2 p-2"
                     src={ele.image}
                     alt="cart image"
                   />
@@ -112,6 +111,7 @@ export const Cartpage = () => {
       </div>
 
       <br />
+      <Card />
       <br />
 
       <Footerpage />

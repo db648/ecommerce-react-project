@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "../navbarFooter/navbar";
 import { Footerpage } from "../navbarFooter/footer";
 import { CarouselComponentWomens } from "../carousel/womenCarousel";
-import { Card } from "../profile/card";
+import { Card } from "../home/card";
 
 // https://assets.ajio.com/cms/AJIO/WEB/15042022-D-Unisex-ourexclusivebrands-womensethnicwear.jpg
 export const Womenswear = () => {

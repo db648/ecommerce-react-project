@@ -1,12 +1,8 @@
 import { ADD_ITEM, CLEAR_ITEM, DEL_ITEM } from "./action";
-import { combineReducers } from "redux"
 
-// const initstate = {
-    let ProductData = JSON.parse(localStorage.getItem("cartProducts")) || []
-//}
+let ProductData = JSON.parse(localStorage.getItem("cartProducts")) || []
 
-export const ProductReducer = (state = ProductData, {type, payload}) =>{
-    
+export const ProductReducer = (state = ProductData, {type, payload}) =>{   
     switch(type) {
         case ADD_ITEM : 
         //    let product = payload;
@@ -52,13 +48,6 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
             
 
         case DEL_ITEM : 
-            //  let del = state.filter((x) => x.id !== payload.id)
-            //  localStorage.setItem("cartProducts", JSON.stringify(del));
-
-            //  return {
-            //     ...state,
-            //     ProductData : del
-            // }
             
             const exist1 = state.find((x) => x.id === payload.id);
             if(exist1.qty === 1) {
@@ -73,7 +62,9 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
                 return deleteitem
             }
 
+
         case CLEAR_ITEM :
+
             let del = state.filter((x) => x.id !== payload.id)
             localStorage.setItem("cartProducts", JSON.stringify(del));
 
@@ -84,6 +75,3 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
     }
 }
 
-export const rootReducer = combineReducers({
-    ProductReducer,
-})

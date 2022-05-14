@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router"
 
-
 export const Card = () => {
     const navigate = useNavigate();
     return (
@@ -10,7 +9,7 @@ export const Card = () => {
                     <div className="col-sm-3 card " style={{width:"18rem" , margin:"20px"}} onClick={() => {
                         navigate("/")
                     }}>
-                        <h4 class="card-text"> All Products</h4>
+                        <h4 className="card-text"> All Products</h4>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8BZnNsKXeWOytU1mut-nSbiAH64QGerudw&usqp=CAU" alt="family" />
                     </div>
                     
@@ -37,7 +36,12 @@ export const Card = () => {
                 </div>
             </div>
 
-            {/* <div class="card text-center w-75 mx-auto">
+            
+        </>
+    )
+}
+
+{/* <div class="card text-center w-75 mx-auto">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
@@ -57,6 +61,3 @@ export const Card = () => {
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div> */}
-        </>
-    )
-}

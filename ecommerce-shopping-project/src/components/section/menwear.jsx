@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "../navbarFooter/navbar";
 import { Footerpage } from "../navbarFooter/footer";
 import { CarouselComponentMens } from "../carousel/menCarousel";
-import { Card } from "../profile/card";
+import { Card } from "../home/card";
 
 // https://assets.ajio.com/cms/AJIO/WEB/10052022-D-unisex-banner1-men-p1-brands-upto70.jpg
 

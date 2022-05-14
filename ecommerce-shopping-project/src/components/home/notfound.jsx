@@ -1,6 +1,6 @@
 import { Footerpage } from "../navbarFooter/footer";
 import { Navbar } from "../navbarFooter/navbar";
-import "./profile.css";
+import "../profile/profile.css";
 
 export const Notfound = () => {
     return(

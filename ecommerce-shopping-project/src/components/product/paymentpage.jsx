@@ -24,7 +24,7 @@ export const Paymentpage = () => {
                         </h2>
                         <br />
                         <h4 className="text-secondary">
-                            Total Amount Payable : {(total+total*(0.18))} /-
+                            Total Amount Payable : {Math.floor(total+total*(0.18))} /-
                         </h4>
                         <img className="card-img-top " src="https://thumbs.dreamstime.com/b/family-shopping-10506966.jpg" alt="img" />
                     </div>

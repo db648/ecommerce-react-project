@@ -25,7 +25,7 @@ export const CheckoutPage = () => {
                         </h6>
                         <br />
                         <h6>
-                            GST Charges : {(total*(0.18))} /-
+                            GST Charges : {Math.floor(total*(0.18))} /-
                         </h6>
                         <br />
                         <h6>
@@ -33,7 +33,7 @@ export const CheckoutPage = () => {
                         </h6>
                         <br />
                         <h4>
-                            Total Amount : {(total+total*(0.18))} /-
+                            Total Amount : {Math.floor(total+total*(0.18))} /-
                         </h4>
                         
                     </div>

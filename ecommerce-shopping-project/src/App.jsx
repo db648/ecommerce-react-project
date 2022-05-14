@@ -2,19 +2,21 @@ import './App.css'
 import { Routes, Route } from "react-router-dom"
 import { Loginpage } from './components/profile/login'
 import { Registerpage } from './components/profile/register'
-import { Notfound } from './components/profile/notfound'
+import { Notfound } from './components/home/notfound'
 import { Productpage } from './components/product/product'
 import { ProductDetailspage } from './components/product/singleproduct'
-import { Homepage } from './components/profile/homepage'
+import { Homepage } from './components/home/homepage'
 import { Kidswear } from './components/section/kidswear'
 import { Womenswear } from './components/section/womenwear'
 import { Menswear } from './components/section/menwear'
 import { Cartpage } from './components/product/cart'
 import { CheckoutPage } from './components/product/checkout'
 import { Paymentpage } from './components/product/paymentpage'
+import { useSelector } from 'react-redux'
 
 function App() {
-
+  const user = useSelector((state) => state.authReducer.AuthReducer.loginUser)
+  console.log("user",user)
   return (
     <div className="App">
 
@@ -25,7 +27,7 @@ function App() {
         {/* <Route exact path='/product' element={ <Productpage /> } /> */}
         <Route exact path="/products/:id" element={ <ProductDetailspage /> } />
         <Route exact path='/cart' element={ <Cartpage /> } />
-        <Route exact path='/checkout' element={ <CheckoutPage /> } />
+        <Route exact path='/checkout' element={ user ? <CheckoutPage /> : <Registerpage /> } />
         <Route exact path='/payment' element={ <Paymentpage /> } />
         <Route exact path='/menswear' element={ <Menswear /> } />
         <Route exact path='/womenswear' element={ <Womenswear /> } />

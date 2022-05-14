@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./navbar.css"
 
 export const Navbar = () => {
+    const navigate = useNavigate()
     let quantity = 0;
     const cartitems = useSelector((state) => state.cartReducer.ProductReducer)
     //console.log("cartitems", cartitems);
@@ -47,8 +48,12 @@ export const Navbar = () => {
                         <h4>{ quantity }</h4>
                     </Link>
                 </div>          
-                <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit">Sign-In</button>
-                <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit">Sign-Up</button>
+                <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit" onClick={() => {
+                    navigate("/login")
+                }}>Sign-In</button>
+                <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit" onClick={() => {
+                    navigate("/register")
+                }}>Sign-Up</button>
                  
             </nav>
         </>

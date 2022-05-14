@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom";
 import "./product.css"
-import { useSelector } from "react-redux";
 
 export const Productpage = () => {
     const [product, setProduct] = useState([]);

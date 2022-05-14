@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
-import { addProduct, deleteProduct } from "../redux/action";
+import { addProduct, deleteProduct } from "../redux/cart-redux/action";
 
 export const ProductDetailspage = () => {
     const {id} = useParams();
