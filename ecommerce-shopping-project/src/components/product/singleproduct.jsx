@@ -56,7 +56,7 @@ export const ProductDetailspage = () => {
                         <h1 className="display-5 fw-bold" >{proddetails.product_name}</h1>
                         <h3 className="my-4">{proddetails.product_brand}</h3>
                         <hr />
-                        <h4 className="my-4"> <b>Price : </b> {proddetails.product_price}/-</h4>
+                        <h4 className="my-4"> <b>Price : Rs. </b> {proddetails.product_price}</h4>
                         <h4 className="my-4" > <b>Product Color : </b> {proddetails.product_color}</h4>
                         <h4> <b>Size of the Product : </b>{proddetails.product_size}</h4>
 

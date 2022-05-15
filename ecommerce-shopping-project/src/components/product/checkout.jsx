@@ -7,7 +7,7 @@ export const CheckoutPage = () => {
     const navigate = useNavigate();
     const cart = useSelector((state) => state.cartReducer.ProductReducer);
     let total = 0;
-    cart.forEach((e) => total+= e.product_price*e.qty)
+    cart.forEach((e) => total+= +(e.product_price*e.qty))
 
     return (
         <>

@@ -87,7 +87,7 @@ export const Productpage = () => {
                                     <h5 className="card-title">{ele.product_name}</h5>
                                     <h6 className="lead">{ele.product_brand} </h6>
                                     <h6 className="lead">Size : {ele.product_size}</h6>
-                                    <p className="lead">Price : {ele.product_price}/-</p>
+                                    <p className="lead">Price : Rs. {ele.product_price}</p>
                                     <Link to={`/products/${ele.id}`} className="btn btn-outline-primary" >
                                         Buy Now
                                     </Link>

@@ -44,9 +44,9 @@ export const Registerpage = () => {
                 />
 
                 <div className="card-body p-4 p-md-5">
-                  <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">
-                    Registration Info
-                  </h3>
+                  <h2 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">
+                    Create New Account
+                  </h2>
 
                   <form className="px-md-2" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-outline mb-4">

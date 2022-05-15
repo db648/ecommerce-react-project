@@ -16,20 +16,18 @@ export const Cartpage = () => {
   };
 
   const increaseQuantity = (item) => {
-    //setQuantity(quantity+1)
     dispatch(addProduct(item));
   };
 
   const decreaseQuantity = (item) => {
-    //   if(quantity <= 1) return;
-    //   setQuantity(quantity-1)
     dispatch(deleteProduct(item));
   };
 
   return (
     <>
       <Navbar />
-
+      {cart.length > 0 
+      ? 
       <div className="container w-75 my-3 py-3">
         <h2 className="fw-bold d-flex justify-content-center mx-auto bg-light text-warning">
           Your Shopping Cart
@@ -48,11 +46,11 @@ export const Cartpage = () => {
                   />
                 </div>
 
-                <div className="col-sm-4">
+                <div className="col-sm-3">
                   <h5 className="m-2 p-2">{ele.product_name}</h5>
                   <h5 className="m-2 p-2">Size : {ele.product_size}</h5>
                   <h5 className="m-2 p-2">Color : {ele.product_color}</h5>
-                  <p className="m-2 p-2">{ele.product_price} /-</p>
+                  <p className="m-2 p-2">Rs. {ele.product_price}</p>
                 </div>
 
                 <div className="col-sm-1 my-4">
@@ -81,8 +79,8 @@ export const Cartpage = () => {
                   </button>
                 </div>
 
-                <div className="col-sm-1">
-                  <h5 className="m-2 p-2">{ele.qty * ele.product_price}/-</h5>
+                <div className="col-sm-2">
+                  <h5 className="m-2 p-2">Rs. {(ele.qty * ele.product_price)}</h5>
                 </div>
 
                 <div
@@ -109,7 +107,29 @@ export const Cartpage = () => {
           Proceed To Checkout
         </button>
       </div>
+      :
+      <>
+            <div className="container">
+                <div className="row">
 
+                    <div className="col-sm-4 mx-auto card" style={{margin:"50px 0px"}} >
+                        <img src="https://www.mycarrom.com/empty-cart.png" alt="Your Shopping Cart is Empty" />
+                        <br />
+                        <h6 className="text-danger">Let's take you shopping!!</h6>
+                        <br />
+                        <button className="btn btn-info" onClick={() => {
+                        navigate("/")
+                        }}> SHOP NOW</button>
+
+                        <br />
+                    </div>
+    
+                </div>
+            </div>
+
+            
+      </>
+    }
       <br />
       <Card />
       <br />
