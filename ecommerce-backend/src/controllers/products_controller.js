@@ -2,10 +2,7 @@ const router = require("express").Router();
 const Products = require("../models/products_model");
 const verify = require("../../verifyToken");
 
-// ***********************************************************************************************************************
 // CREATE Products
-// ***********************************************************************************************************************
-
 router.post("/", verify, async (req, res) => {
   try {
     const newProducts = await Products.create(req.body);
@@ -16,8 +13,6 @@ router.post("/", verify, async (req, res) => {
 });
 
 // GET SINGLE Product
-// ***********************************************************************************************************************
-
 router.get("/products/:id", verify, async (req, res) => {
   try {
     const product = await Products.findById(req.params.id)
@@ -29,10 +24,7 @@ router.get("/products/:id", verify, async (req, res) => {
   }
 });
 
-// ***********************************************************************************************************************
 // GET ALL Products
-// ***********************************************************************************************************************
-
 router.get("/", verify, async (req, res) => {
     try {
       const Productss = await Products.find()
@@ -44,8 +36,7 @@ router.get("/", verify, async (req, res) => {
     }
   });
 
-// ***********************************************************************************************************************
-//--------search-------------------------------------------------------------------------------------------------------------------------------
+// Search
 router.get("/search", verify, async (req, res) => {
   try {
     let term = req.query.s;

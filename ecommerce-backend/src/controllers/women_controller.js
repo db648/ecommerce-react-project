@@ -2,10 +2,7 @@ const router = require("express").Router();
 const Women = require("../models/women_model");
 const verify = require("../../verifyToken");
 
-// ***********************************************************************************************************************
 // CREATE women
-// ***********************************************************************************************************************
-
 router.post("/", verify, async (req, res) => {
   try {
     const newwomen = await Women.create(req.body);
@@ -16,8 +13,6 @@ router.post("/", verify, async (req, res) => {
 });
 
 // GET SINGLE Product
-// ***********************************************************************************************************************
-
 router.get("/women/:id", verify, async (req, res) => {
   try {
     const women = await Women.findById(req.params.id)
@@ -29,10 +24,7 @@ router.get("/women/:id", verify, async (req, res) => {
   }
 });
 
-// ***********************************************************************************************************************
 // GET ALL women
-// ***********************************************************************************************************************
-
 router.get("/", verify, async (req, res) => {
     try {
       const womens = await Women.find()
@@ -44,8 +36,7 @@ router.get("/", verify, async (req, res) => {
     }
   });
 
-// ***********************************************************************************************************************
-//--------search-------------------------------------------------------------------------------------------------------------------------------
+// Search
 router.get("/search", verify, async (req, res) => {
   try {
     let term = req.query.s;

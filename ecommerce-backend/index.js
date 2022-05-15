@@ -19,7 +19,7 @@ app.use("/women", women_controller);
 app.use("/men", men_controller);
 app.use("/kids", kids_controller);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, async () => {
   try {
