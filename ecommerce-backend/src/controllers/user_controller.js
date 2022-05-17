@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
     const user = await User.create({
       username: req.body.username,
       email: req.body.email,
-      password: CryptoJS.AES.encrypt(req.body.password, "shopping").toString(),
+      password: CryptoJS.AES.encrypt(req.body.password, "products").toString(),
     });
     return res.status(201).send(user);
   } catch (err) {
@@ -32,7 +32,7 @@ router.post("/login", async (req, res) => {
       return res.status(201).send({ status: "false" });
     }
 
-    const bytes = CryptoJS.AES.decrypt(user.password, "shopping");
+    const bytes = CryptoJS.AES.decrypt(user.password, "products");
     const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
 
     if (originalPassword !== req.body.password) {
@@ -40,8 +40,8 @@ router.post("/login", async (req, res) => {
     }
 
     const accessToken = jwt.sign(
-      { id: user._id },
-      "shopping"
+      { id: user._id, isAdmin : user.isAdmin },
+      "products"
     );
 
     const { password, ...info } = user._doc;
