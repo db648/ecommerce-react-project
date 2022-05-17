@@ -13,7 +13,13 @@ export const Productpage = () => {
     },[])
 
     const GetProducts = () => {
-        axios.get("http://localhost:8080/products")
+        axios.get("https://ecommerce-shopping-project.herokuapp.com/products",{
+            headers: {
+              token:
+                "Bearer " +
+                JSON.parse(localStorage.getItem("login_status")).accessToken,
+            },
+          })
         .then((res) => {
             // console.log(res.data);
             setProduct(res.data);

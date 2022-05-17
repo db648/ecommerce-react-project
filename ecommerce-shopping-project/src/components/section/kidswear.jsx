@@ -16,7 +16,14 @@ export const Kidswear = () => {
     },[])
 
     const GetKidsProducts = () => {
-        axios.get("http://localhost:8080/kids").then((res) => {
+        axios.get("https://ecommerce-shopping-project.herokuapp.com/kids",{
+            headers: {
+              token:
+                "Bearer " +
+                JSON.parse(localStorage.getItem("login_status")).accessToken,
+            },
+          })
+        .then((res) => {
             console.log(res.data);
             setKid(res.data);
         })

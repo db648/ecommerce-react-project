@@ -21,7 +21,14 @@ export const ProductDetailspage = () => {
     },[])
 
     const GetProductsDetails = () => {
-        axios.get(`http://localhost:8080/products/${id}`).then((res) => {
+        axios.get(`https://ecommerce-shopping-project.herokuapp.com/products/${id}`,{
+            headers: {
+              token:
+                "Bearer " +
+                JSON.parse(localStorage.getItem("login_status")).accessToken,
+            },
+          })
+        .then((res) => {
             // console.log("single product details",res.data);
             setProddetails(res.data);
             

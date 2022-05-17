@@ -20,7 +20,7 @@ export const Loginpage = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://flatsunit6.herokuapp.com/user/login", data)
+      .post("https://ecommerce-shopping-project.herokuapp.com/user/login", data)
       .then((res) => {
         console.log("before", res.data);
         if (res.data.status === "false") {

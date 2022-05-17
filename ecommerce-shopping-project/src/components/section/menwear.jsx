@@ -16,7 +16,14 @@ export const Menswear = () => {
     },[])
 
     const GetMenProducts = () => {
-        axios.get("http://localhost:8080/men").then((res) => {
+        axios.get("https://ecommerce-shopping-project.herokuapp.com/men",{
+            headers: {
+              token:
+                "Bearer " +
+                JSON.parse(localStorage.getItem("login_status")).accessToken,
+            },
+          })
+        .then((res) => {
             console.log(res.data);
             setMen(res.data);
         })

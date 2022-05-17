@@ -18,7 +18,7 @@ export const Registerpage = () => {
   const onSubmit = (data) => {
     console.log("submit", data);
     axios
-      .post("https://flatsunit6.herokuapp.com/user/register", data)
+      .post("https://ecommerce-shopping-project.herokuapp.com/user/register", data)
       .then((res) => {
         setTimeout(() => {
           navigate("/login");
