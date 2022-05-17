@@ -3,18 +3,17 @@ const Products = require("../models/products_model");
 const verify = require("../../verifyToken");
 
 // CREATE Products
-router.post("/", verify, async (req, res) => {
+router.post("", verify, async (req, res) => {
   try {
     const newProducts = await Products.create(req.body);
-    console.log(newProducts)
     res.status(201).send(newProducts);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).send(err.message);
   }
 });
 
 // GET SINGLE Product
-router.get("/products/:id", verify, async (req, res) => {
+router.get("/:id", verify, async (req, res) => {
   try {
     const product = await Products.findById(req.params.id)
       .lean()
@@ -37,19 +36,18 @@ router.get("/", verify, async (req, res) => {
     }
   });
 
-// Search
-// router.get("/search", verify, async (req, res) => {
-//   try {
-//     let term = req.query.s;
-
-//     let result = await Products.find({ $text: { $search: term } })
-//       .lean()
-//       .exec();
-//     return res.status(201).send({ result });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+ // Search
+router.get("/search", verify, async (req, res) => {
+  try {
+    let term = req.query.s;
+    let result = await Products.find({ $text: { $search: term } })
+      .lean()
+      .exec();
+    return res.status(201).send({ result });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 module.exports = router;
