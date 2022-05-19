@@ -5,7 +5,6 @@ import "./product.css"
 
 export const Productpage = () => {
     const [product, setProduct] = useState([]);
-    // const [resData, setResData] = useState(product);
     const [filtersize, setFiltersize] = useState("")
     
     useEffect(() => {
@@ -13,18 +12,10 @@ export const Productpage = () => {
     },[])
 
     const GetProducts = () => {
-        axios.get("https://ecommerce-shopping-project.herokuapp.com/products",{
-            headers: {
-              token:
-                "Bearer " +
-                JSON.parse(localStorage.getItem("login_status")).accessToken,
-            },
-          })
+        axios.get("http://localhost:8080/products")
         .then((res) => {
             // console.log(res.data);
             setProduct(res.data);
-            // setResData(res.data);
-
         })
         .catch((err) => {
             console.log(err)
@@ -32,18 +23,15 @@ export const Productpage = () => {
     }
 
     const sortPrice = (value) => {
-        //console.log("value", value)
         if(value === "asc") {
             let data = product.sort((a,b) => a.product_price - b.product_price)
-            console.log("data",data)
-            setProduct(data)
-        //   let data = resData.sort((a,b) => a.product_price - b.product_price)
-        //   setResData(data)
+            // console.log("data",data)
+            setProduct([...data])
         }
         else {
           let data1 = product.sort((a,b) => b.product_price - a.product_price)
-          console.log("data1",data1)
-          setProduct(data1)
+        //   console.log("data1",data1)
+          setProduct([...data1])
         }
     }
 
