@@ -3,7 +3,7 @@ const Kids = require("../models/kids_model");
 const verify = require("../../verifyToken");
 
 // CREATE Kids
-router.post("/", verify, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newKids = await Kids.create(req.body);
     res.status(201).send(newKids);
@@ -13,7 +13,7 @@ router.post("/", verify, async (req, res) => {
 });
 
 // GET SINGLE Product
-router.get("/kids/:id", verify, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const kids = await Kids.findById(req.params.id)
       .lean()
@@ -25,7 +25,7 @@ router.get("/kids/:id", verify, async (req, res) => {
 });
 
 // GET ALL Kids
-router.get("/", verify, async (req, res) => {
+router.get("/", async (req, res) => {
     try {
       const Kidss = await Kids.find()
         .lean()
@@ -37,7 +37,7 @@ router.get("/", verify, async (req, res) => {
   });
 
 // search
-router.get("/search", verify, async (req, res) => {
+router.get("/search", async (req, res) => {
   try {
     let term = req.query.s;
 

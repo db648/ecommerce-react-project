@@ -3,7 +3,7 @@ const Women = require("../models/women_model");
 const verify = require("../../verifyToken");
 
 // CREATE women
-router.post("/", verify, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newwomen = await Women.create(req.body);
     res.status(201).send(newwomen);
@@ -13,7 +13,7 @@ router.post("/", verify, async (req, res) => {
 });
 
 // GET SINGLE Product
-router.get("/women/:id", verify, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const women = await Women.findById(req.params.id)
       .lean()
@@ -25,7 +25,7 @@ router.get("/women/:id", verify, async (req, res) => {
 });
 
 // GET ALL women
-router.get("/", verify, async (req, res) => {
+router.get("/", async (req, res) => {
     try {
       const womens = await Women.find()
         .lean()
@@ -37,7 +37,7 @@ router.get("/", verify, async (req, res) => {
   });
 
 // Search
-router.get("/search", verify, async (req, res) => {
+router.get("/search", async (req, res) => {
   try {
     let term = req.query.s;
 
