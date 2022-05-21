@@ -16,18 +16,17 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
         //     }
         
         let product = payload;
-        const exist = state.find((x) => x.id === product.id)
+        const exist = state.find((x) => x._id === product._id)
             if (exist) {
                 //increment the quantity
                 let updateCart = state.map((x) =>
-                    x.id === product.id ? { ...x, qty: x.qty + 1 } : x
+                    x._id === product._id ? { ...x, qty: x.qty + 1 } : x
                 );
                 localStorage.setItem("cartProducts", JSON.stringify(updateCart));
                 
                 return updateCart
             }
             else {
-                const product = payload;
                 localStorage.setItem("cartProducts", JSON.stringify(
                     [
                         ...state,
@@ -49,15 +48,15 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
 
         case DEL_ITEM : 
             
-            const exist1 = state.find((x) => x.id === payload.id);
+            const exist1 = state.find((x) => x._id === payload._id);
             if(exist1.qty === 1) {
-                let deleteproduct = state.filter((z) => z.id !== exist1.id);
+                let deleteproduct = state.filter((z) => z._id !== exist1._id);
                 localStorage.setItem("cartProducts", JSON.stringify(deleteproduct));
                 return deleteproduct
             }
             else {
                 let deleteitem = state.map((e) => 
-                e.id === payload.id ? {...e, qty : e.qty-1} : e);
+                e._id === payload._id ? {...e, qty : e.qty-1} : e);
                 localStorage.setItem("cartProducts", JSON.stringify(deleteitem));
                 return deleteitem
             }
@@ -65,7 +64,7 @@ export const ProductReducer = (state = ProductData, {type, payload}) =>{
 
         case CLEAR_ITEM :
 
-            let del = state.filter((x) => x.id !== payload.id)
+            let del = state.filter((x) => x._id !== payload._id)
             localStorage.setItem("cartProducts", JSON.stringify(del));
 
             return del

@@ -12,9 +12,9 @@ export const Productpage = () => {
     },[])
 
     const GetProducts = () => {
-        axios.get("http://localhost:8080/products")
+        axios.get("https://ecommerce-shopping-clone.herokuapp.com/products")
         .then((res) => {
-            // console.log(res.data);
+            console.log(res.data);
             setProduct(res.data);
         })
         .catch((err) => {
@@ -85,7 +85,7 @@ export const Productpage = () => {
                                     <h6 className="lead">{ele.product_brand} </h6>
                                     <h6 className="lead">Size : {ele.product_size}</h6>
                                     <p className="lead">Price : Rs. {ele.product_price}</p>
-                                    <Link to={`/products/${ele.id}`} className="btn btn-outline-primary" >
+                                    <Link to={`/products/${ele._id}`} className="btn btn-outline-primary" >
                                         Buy Now
                                     </Link>
                                 </div>

@@ -13,6 +13,9 @@ import { Cartpage } from './components/product/cart'
 import { CheckoutPage } from './components/product/checkout'
 import { Paymentpage } from './components/product/paymentpage'
 import { useSelector } from 'react-redux'
+import { KidProductpage } from './components/section/kidproduct'
+import { WomenProductpage } from './components/section/womenproduct'
+import { MenProductpage } from './components/section/menproduct'
 
 function App() {
   const user = useSelector((state) => state.authReducer.AuthReducer.loginUser)
@@ -26,6 +29,9 @@ function App() {
         <Route exact path="/register" element={ <Registerpage /> } />
         {/* <Route exact path='/product' element={ <Productpage /> } /> */}
         <Route exact path="/products/:id" element={ <ProductDetailspage /> } />
+        <Route exact path="/kids/:id" element={ <KidProductpage /> } />
+        <Route exact path="/women/:id" element={ <WomenProductpage /> } />
+        <Route exact path="/men/:id" element={ <MenProductpage /> } />
         <Route exact path='/cart' element={ <Cartpage /> } />
         <Route exact path='/checkout' element={ user ? <CheckoutPage /> : <Registerpage /> } />
         <Route exact path='/payment' element={ <Paymentpage /> } />

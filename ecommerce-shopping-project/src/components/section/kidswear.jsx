@@ -16,13 +16,7 @@ export const Kidswear = () => {
     },[])
 
     const GetKidsProducts = () => {
-        axios.get("https://ecommerce-shopping-project.herokuapp.com/kids",{
-            headers: {
-              token:
-                "Bearer " +
-                JSON.parse(localStorage.getItem("login_status")).accessToken,
-            },
-          })
+        axios.get("https://ecommerce-shopping-clone.herokuapp.com/kids")
         .then((res) => {
             console.log(res.data);
             setKid(res.data);
@@ -56,7 +50,7 @@ export const Kidswear = () => {
                                     <h6 className="lead">Brand : {ele.product_brand} </h6>
                                     <h6 className="lead">Size : {ele.product_size}</h6>
                                     <p className="lead">Price : {ele.product_price}/-</p>
-                                    <Link to={`/products/${ele.id}`} className="btn btn-outline-primary" >
+                                    <Link to={`/kids/${ele._id}`} className="btn btn-outline-primary" >
                                         Buy Now
                                     </Link>
                                 </div>

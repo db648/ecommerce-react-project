@@ -6,7 +6,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { addProduct, deleteProduct } from "../redux/cart-redux/action";
 
-export const ProductDetailspage = () => {
+export const MenProductpage = () => {
      const {id} = useParams();
     const [proddetails, setProddetails] = useState([]);
     const dispatch = useDispatch();
@@ -14,19 +14,19 @@ export const ProductDetailspage = () => {
 
     let Quantity = 0;
     const productitems= useSelector((state) => state.cartReducer.ProductReducer)
-    console.log("productitems",productitems)
+    //console.log("productitems",productitems)
     productitems.forEach((e) => Quantity = e.qty);
 
-     useEffect(() => {
-        GetProductsDetails();
+    useEffect(() => {
+        GetMenProductsDetails();
     },[])
 
-    const GetProductsDetails = () => {
-        axios.get(`https://ecommerce-shopping-clone.herokuapp.com/products/${id}`)
+  
+    const GetMenProductsDetails = () => {
+        axios.get(`https://ecommerce-shopping-clone.herokuapp.com/men/${id}`)
         .then((res) => {
-            console.log("single product details",res);
-            setProddetails(res.data);
-            
+            console.log("single men product",res);
+            setProddetails(res.data);          
         })
         .catch((err) => {
             console.log(err);

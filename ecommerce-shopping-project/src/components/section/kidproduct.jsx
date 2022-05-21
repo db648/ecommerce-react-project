@@ -6,7 +6,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { addProduct, deleteProduct } from "../redux/cart-redux/action";
 
-export const ProductDetailspage = () => {
+export const KidProductpage = () => {
      const {id} = useParams();
     const [proddetails, setProddetails] = useState([]);
     const dispatch = useDispatch();
@@ -14,17 +14,17 @@ export const ProductDetailspage = () => {
 
     let Quantity = 0;
     const productitems= useSelector((state) => state.cartReducer.ProductReducer)
-    console.log("productitems",productitems)
+    console.log("kids productitems",productitems)
     productitems.forEach((e) => Quantity = e.qty);
 
      useEffect(() => {
-        GetProductsDetails();
+        GetKidsProductsDetails();       
     },[])
 
-    const GetProductsDetails = () => {
-        axios.get(`https://ecommerce-shopping-clone.herokuapp.com/products/${id}`)
+    const GetKidsProductsDetails = () => {
+        axios.get(`https://ecommerce-shopping-clone.herokuapp.com/kids/${id}`)
         .then((res) => {
-            console.log("single product details",res);
+            console.log("single kid product",res);
             setProddetails(res.data);
             
         })
@@ -38,13 +38,10 @@ export const ProductDetailspage = () => {
     }
     
     const increaseQuantity = (proddetails) => {
-        //setQuantity(quantity+1)
         dispatch(addProduct(proddetails));
     }
   
     const decreaseQuantity = (proddetails) => {
-      //   if(quantity <= 1) return;
-      //   setQuantity(quantity-1)
         dispatch(deleteProduct(proddetails));
     }
    
