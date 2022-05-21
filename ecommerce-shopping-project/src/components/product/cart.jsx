@@ -36,11 +36,11 @@ export const Cartpage = () => {
         <br />
         {cart.map((ele) => {
           return (
-            <>
+            <div className="container my-5 py-3">
               <div className="row">
-                <div className="col-sm-4">
+                <div className="col-md-4 d-flex justify-content-center mx-auto">
                   <img
-                    className="col-sm-6 d-flex justify-content-center mx-auto m-2 p-2"
+                    className="w-75 d-flex justify-content-center mx-auto"
                     src={ele.image}
                     alt="cart image"
                   />
@@ -91,8 +91,9 @@ export const Cartpage = () => {
                 >
                   <img src="https://img.icons8.com/color/48/000000/delete-forever.png" />
                 </div>
+                
               </div>
-            </>
+            </div>
           );
         })}
         <br />

@@ -96,9 +96,10 @@ export const Registerpage = () => {
 
                     <p className="text-center text-muted mt-5 mb-0">
                       Have already an account?{" "}
-                      <a href="./login" className="fw-bold text-body">
-                        <u>Login here</u>
-                      </a>
+                      
+                            <button className="btn fw-bold text-body" onClick={() => {
+                                navigate("/login")
+                            }}><u>Login here</u></button>
                     </p>
                   </form>
                 </div>

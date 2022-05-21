@@ -53,7 +53,7 @@ export const ProductDetailspage = () => {
         <Navbar />
         <div className="container my-5 py-3">
                 <div className="row">
-                    <div className="col-md-6 w-50d-flex justify-content-center mx-auto product">
+                    <div className="col-md-6 w-50 d-flex justify-content-center mx-auto product">
                        <img className="w-75 d-flex justify-content-center mx-auto" src={proddetails.image} alt="image" />
                     </div>
 
