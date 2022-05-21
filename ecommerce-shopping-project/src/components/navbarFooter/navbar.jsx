@@ -25,19 +25,29 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item active">
-                            <a className="nav-link text-light " href="/">Products</a>
+                            <button className="btn text-light" onClick={() => {
+                                navigate("/")
+                            }}>Products</button>
                         </li>
                         <li className="nav-item active">
-                            <a className="nav-link text-light " href="/menswear">Mens Wear</a>
+                            <button className="btn text-light" onClick={() => {
+                                navigate("/menswear")
+                            }}>Mens Wear</button>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light " href="/womenswear">Womens Wear</a>
+                            <button className="btn text-light" onClick={() => {
+                                navigate("/womenswear")
+                            }}>Womens Wear</button>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light" href="/kidswear">Kid's Wear</a>
+                            <button className="btn text-light" onClick={() => {
+                                navigate("/kidswear")
+                            }}>Kid's Wear</button>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light" href="/">Today's Deal</a>
+                            <button className="btn text-light" onClick={() => {
+                                navigate("/")
+                            }}>Today's Deal</button>
                         </li>
                     </ul>
                 </div>
