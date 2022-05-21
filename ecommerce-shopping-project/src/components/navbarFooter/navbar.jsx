@@ -13,9 +13,9 @@ export const Navbar = () => {
         <>
            <nav className="navbar sticky-top navbar-expand-lg navbar-light bgclr">
                 
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                </button>
+                </button> */}
 
                 <a className="navbar-brand text-light" href="/">
                     <img src="https://img.icons8.com/external-flat-02-chattapat-/44/000000/external-skateboard-sales-flat-02-chattapat-.png" alt="logo" />
@@ -61,9 +61,9 @@ export const Navbar = () => {
                 <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit" onClick={() => {
                     navigate("/login")
                 }}>Sign-In</button>
-                <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit" onClick={() => {
+                {/* <button className="btn btn-outline-primary my-2 my-sm-0 m-2" type="submit" onClick={() => {
                     navigate("/register")
-                }}>Sign-Up</button>
+                }}>Sign-Up</button> */}
                  
             </nav>
         </>

@@ -14,8 +14,8 @@ export const CheckoutPage = () => {
         <Navbar />
         
             <div className="container my-5">
-                <div className="row g-5">
-                    <div className="col-md-5 col-lg-4 order-md-last btn btn-outline-success">
+                <div className="row">
+                    <div className="col-md-3 col-lg-3 order-md-last btn btn-outline-success">
                         <h2>
                             Order Summary
                         </h2>

@@ -89,6 +89,14 @@ export const Loginpage = () => {
                         Login
                       </button>
                     </div>
+
+                    <p className="text-center text-muted mt-5 mb-0">
+                    Create New Account here{" "}
+                      
+                            <button className="btn fw-bold text-body" onClick={() => {
+                                navigate("/register")
+                            }}><u>Register here</u></button>
+                    </p>
                   </form>
                 </div>
               </div>
