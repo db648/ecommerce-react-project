@@ -7,14 +7,14 @@ import { useDispatch, useSelector } from "react-redux"
 import { addProduct, deleteProduct } from "../redux/cart-redux/action";
 
 export const ProductDetailspage = () => {
-     const {id} = useParams();
+    const {id} = useParams();
     const [proddetails, setProddetails] = useState([]);
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
     let Quantity = 0;
     const productitems= useSelector((state) => state.cartReducer.ProductReducer)
-    console.log("productitems",productitems)
+    // console.log("productitems",productitems)
     productitems.forEach((e) => Quantity = e.qty);
 
      useEffect(() => {
@@ -38,13 +38,10 @@ export const ProductDetailspage = () => {
     }
     
     const increaseQuantity = (proddetails) => {
-        //setQuantity(quantity+1)
         dispatch(addProduct(proddetails));
     }
   
     const decreaseQuantity = (proddetails) => {
-      //   if(quantity <= 1) return;
-      //   setQuantity(quantity-1)
         dispatch(deleteProduct(proddetails));
     }
    
@@ -54,7 +51,7 @@ export const ProductDetailspage = () => {
         <div className="container my-5 py-3">
                 <div className="row">
                     <div className="col-md-6 w-50 d-flex justify-content-center mx-auto product">
-                       <img className="w-75 d-flex justify-content-center mx-auto" src={proddetails.image} alt="image" />
+                       <img className="d-flex justify-content-center mx-auto" src={proddetails.image} alt="image" />
                     </div>
 
                     <div className="col-md-6 d-flex flex-column justify-content-center" >
